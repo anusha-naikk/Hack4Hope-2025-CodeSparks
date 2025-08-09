@@ -1,7 +1,9 @@
+// src/App.tsx
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import ProfileSetup from "./components/ProfileSetup";
+import ChatWidget from "./components/ChatWidget"; // <— add this
 import "./App.css";
 
 const App = () => {
@@ -11,6 +13,9 @@ const App = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/profile" element={<ProfileSetup />} />
       </Routes>
+
+      {/* Global floating chat */}
+      <ChatWidget />
     </Router>
   );
 };
